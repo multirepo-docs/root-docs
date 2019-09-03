@@ -3,7 +3,6 @@ language: python
 env:
   global:
   - secure: S/Qwufbvxf03AoBtb85ZP3mJUszLYixGN31M0EF9lcJA6csWT4wrBnuRpq0gyFAOYh5jXEkQEhmNfnL43xOHx5kZrDRbugaA63tZ8iuh3YngB3HVVCBom8qb1gE+MAWqHrzWcEMT+Q1AIbVqU9nsVt48p9hQRz+Lazz+pfKzuXM=
-  - GH_TOKEN=ae4632b2215b5ed53f86ad40df22463475181c05
 install:
 - pip install pygments
 - pip install mkdocs
