@@ -1,9 +1,1 @@
-[submodule "docs/docs/repo-docs-1"]
-	path = docs/docs/repo-docs-1
-	url = https://github.com/multirepo-docs/repo-docs-1
-[submodule "docs/docs/repo-docs-2"]
-	path = docs/docs/repo-docs-2
-	url = https://github.com/multirepo-docs/repo-docs-2
-[submodule "docs/docs/repo-docs-3"]
-	path = docs/docs/repo-docs-3
-	url = https://github.com/multirepo-docs/repo-docs-3
+
