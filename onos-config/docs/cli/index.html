@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Administrative and Diagnostic Command-Line - My Docs</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">My Docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Onos config <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../">onos-config</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Build</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Golang build</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../build/golang-build/">Developer Docker Container</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Protoc go</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../build/protoc-go/">Protoc Go Docker Container</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Configs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../configs/">Index</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Deployments</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Helm</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Device simulator</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../deployments/helm/device-simulator/">Index</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Files</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Configs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../deployments/helm/device-simulator/files/configs/">Index</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Onos config</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../deployments/helm/onos-config/">Index</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Files</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Certs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../deployments/helm/onos-config/files/certs/">Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Configs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../deployments/helm/onos-config/files/configs/">Index</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Docs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../build/">Building onos-config</a>
+</li>
+            
+<li class="active">
+    <a href="./">Administrative and Diagnostic Command-Line</a>
+</li>
+            
+<li >
+    <a href="../community-info/">Contacts and Calendars</a>
+</li>
+            
+<li >
+    <a href="../contributing/">Contributing to onos-config</a>
+</li>
+            
+<li >
+    <a href="../debugging/">Debug onos-config in Onit Using Delve</a>
+</li>
+            
+<li >
+    <a href="../deployment/">Deploying onos-config</a>
+</li>
+            
+<li >
+    <a href="../dev_workflow/">Developer Workflow</a>
+</li>
+            
+<li >
+    <a href="../gnmi/">Northbound gNMI service</a>
+</li>
+            
+<li >
+    <a href="../gnmi_extensions/">gNMI extensions on the Northbound interface</a>
+</li>
+            
+<li >
+    <a href="../license_goland/">GoLand Copyright Profile Setup</a>
+</li>
+            
+<li >
+    <a href="../modelplugin/">Extending onos-config with Model Plugins</a>
+</li>
+            
+<li >
+    <a href="../prerequisites/">Development Prerequisites</a>
+</li>
+            
+<li >
+    <a href="../pull_requests/">Issues and Pull Requests</a>
+</li>
+            
+<li >
+    <a href="../run/">Running onos-config</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Modelplugin</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Yang</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../modelplugin/yang/">YANG store</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Onos test <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../onos-test/">Index</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Docs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../onos-test/docs/run/">Run</a>
+</li>
+            
+<li >
+    <a href="../../../onos-test/docs/setup/">How To Install and Run ONIT?</a>
+</li>
+            
+<li >
+    <a href="../../../onos-test/docs/testing/">Running Tests</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Onos ztp <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../onos-ztp/">onos-ztp</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Repo docs 1 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../repo-docs-1/">repo-docs-1</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Docs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../repo-docs-1/docs/">Index</a>
+</li>
+            
+<li >
+    <a href="../../../repo-docs-1/docs/test-1/">Document Test 1</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../build/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../community-info/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#administrative-and-diagnostic-command-line">Administrative and Diagnostic Command-Line</a></li>
+            <li><a href="#usage">Usage</a></li>
+            <li><a href="#example-commands">Example Commands</a></li>
+            <li><a href="#other-diagnostic-commands">Other Diagnostic Commands</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="administrative-and-diagnostic-command-line">Administrative and Diagnostic Command-Line</h1>
+<p>The project provides a command-line facilities for remotely 
+interacting with the administrative and diagnostic services of the <code>onos-config</code> server.</p>
+<p>The commands are available at run-time using the consolidated <code>onos</code> client hosted in 
+the <code>onos-cli</code> repository, but their implementation is hosted and built here.</p>
+<p>The documentation about building and deploying the consolidate <code>onos</code> client or its Docker container
+is available in the <code>onos-cli</code> GitHub repository.</p>
+<h2 id="usage">Usage</h2>
+<pre><code>&gt; onos config --help
+ONOS configuration subsystem commands
+
+Usage:
+  onos config [command]
+
+Available Commands:
+  add         Add a config resource
+  config      Read and update the config configuration
+  get         Get config resources
+  rollback    Rolls-back a network configuration change
+
+Flags:
+  -h, --help   help for config
+
+Use &quot;onos config [command] --help&quot; for more information about a command.
+</code></pre>
+
+<h3 id="global-flags">Global Flags</h3>
+<p>Since the <code>onos</code> command is a client, it requires the address of the server as well
+as the paths to the key and the certificate to establish secure connection to the 
+server.</p>
+<p>These options are global to all commands and can be persisted to avoid having to
+specify them for each command. For example, you can set the default server address
+as follows:</p>
+<pre><code class="bash">&gt; onos config config set address onos-config-server:5150
+</code></pre>
+
+<p>Subsequent usages of the <code>onos</code> command can then abstain from using the <code>--address</code> 
+option to indicate the server address, resulting in easier usage.</p>
+<h2 id="example-commands">Example Commands</h2>
+<h3 id="list-network-changes">List Network Changes</h3>
+<p>For example, to list all network changes submitted through the northbound gNMI interface run:</p>
+<pre><code class="bash">&gt; onos config get net-changes
+...
+</code></pre>
+
+<h3 id="rollback-network-change">Rollback Network Change</h3>
+<p>To rollback a network use the rollback admin tool. This will rollback the last network
+change unless a specific change is given with the <code>changename</code> parameter</p>
+<pre><code class="bash">&gt; onos config rollback Change-VgUAZI928B644v/2XQ0n24x0SjA=
+</code></pre>
+
+<h3 id="listing-and-loading-model-plugins">Listing and Loading model plugins</h3>
+<p>A model plugin is a shared object library that represents the YANG models of a
+particular Device Type and Version. The plugin allows user to create and load
+their own device models in to onos-config that can be used for validating that
+configuration changes observe the structure of the YANG models in use on the
+device. This improves usability by pushing information about the devices'
+model back up to the onos-config gNMI northbound interface.</p>
+<p>Model plugins can be loaded at the startup of onos-config by (repeated) --modelPlugin
+options, or they can be loaded at run time. To see the list of currently loaded
+plugins use the command:</p>
+<pre><code class="bash">&gt; onos config get plugins
+</code></pre>
+
+<p>To load a plugin dynamically at runtime use the command:</p>
+<pre><code class="bash">&gt; onos config add plugin &lt;full path and filename of a compatible shared object library on target machine&gt;
+</code></pre>
+
+<blockquote>
+<p>NOTE: Model Plugins cannot be dynamically unloaded - a restart of onos-config
+is required to unload.
+In a distributed environment the ModelPlugin will have to be loaded on all
+instances of onos-config</p>
+</blockquote>
+<h2 id="other-diagnostic-commands">Other Diagnostic Commands</h2>
+<p>There are a number of commands that provide internal view into the state the onos-config store.
+These tools use a special-purpose gRPC interfaces to obtain the internal meta-data
+from the running onos-config process. Please note that these tools are intended purely for
+diagnostics and should not be relied upon for programmatic purposes as they are not subject
+to any backward compatibility guarantees.</p>
+<h3 id="changes">Changes</h3>
+<p>For example, run the following to list all changes submitted through the northbound gNMI 
+as they are tracked by the system broken-up into device specific batches:</p>
+<pre><code class="bash">&gt; onos config get changes
+...
+</code></pre>
+
+<blockquote>
+<p>For a specific change specify the optional <code>changeId</code> argument.</p>
+</blockquote>
+<h3 id="configs">Configs</h3>
+<p>To get details from the Configuration store use</p>
+<pre><code class="bash">&gt; onos config get configs
+...
+</code></pre>
+
+<blockquote>
+<p>For the configuration for a specific device use the optional <code>deviceId</code> argument.</p>
+</blockquote>
+<h3 id="devicetree">Devicetree</h3>
+<p>To get the aggregate configuration of a device in a hierarchical JSON structure from the store use:</p>
+<pre><code class="bash">&gt; onos config get devicetree --layer 0 Device1
+DEVICE          CONFIGURATION       TYPE        VERSION
+Device1                 Device1-1.0.0           TestDevice      1.0.0
+CHANGE: 2uUbeEV4i3ADedjeORmgQt6CVDM=
+CHANGE: tAk3GZSh1qbdhdm5414r46RLvqw=
+CHANGE: MY8s8Opw+xjbcARIMzIpUIzeXv0=
+TREE:
+{&quot;cont1a&quot;:{&quot;cont2a&quot;:{&quot;leaf2a&quot;:13,&quot;leaf2b&quot;:1.14159,&quot;leaf2c&quot;:&quot;def&quot;,&quot;leaf2d&quot;:0.002,&quot;leaf2e&quot;:[-99,-4,5,200],&quot;leaf2g&quot;:false},&quot;leaf1a&quot;:&quot;abcdef&quot;,&quot;list2a&quot;:[{&quot;name&quot;:&quot;txout1&quot;,&quot;tx-power&quot;:8},{&quot;name&quot;:&quot;txout3&quot;,&quot;tx-power&quot;:16}]},&quot;test1:leafAtTopLevel&quot;:&quot;WXY-1234&quot;}
+</code></pre>
+
+<blockquote>
+<p>This displays the list of changes IDs and the aggregate effect of layering each
+one on top of the other. This is <strong>effective</strong> configuration.</p>
+<p>By default all layers are shown (<strong>layer=0</strong>). To show the previous <strong>effective</strong>
+configuration use <strong>layer=-1</strong></p>
+<p>To display the devices trees for all devices, just omit the device name.</p>
+</blockquote></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

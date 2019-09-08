@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Deploying onos-config - My Docs</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">My Docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Onos config <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../">onos-config</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Build</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Golang build</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../build/golang-build/">Developer Docker Container</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Protoc go</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../build/protoc-go/">Protoc Go Docker Container</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Configs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../configs/">Index</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Deployments</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Helm</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Device simulator</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../deployments/helm/device-simulator/">Index</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Files</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Configs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../deployments/helm/device-simulator/files/configs/">Index</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Onos config</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../deployments/helm/onos-config/">Index</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Files</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Certs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../deployments/helm/onos-config/files/certs/">Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Configs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../deployments/helm/onos-config/files/configs/">Index</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Docs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../build/">Building onos-config</a>
+</li>
+            
+<li >
+    <a href="../cli/">Administrative and Diagnostic Command-Line</a>
+</li>
+            
+<li >
+    <a href="../community-info/">Contacts and Calendars</a>
+</li>
+            
+<li >
+    <a href="../contributing/">Contributing to onos-config</a>
+</li>
+            
+<li >
+    <a href="../debugging/">Debug onos-config in Onit Using Delve</a>
+</li>
+            
+<li class="active">
+    <a href="./">Deploying onos-config</a>
+</li>
+            
+<li >
+    <a href="../dev_workflow/">Developer Workflow</a>
+</li>
+            
+<li >
+    <a href="../gnmi/">Northbound gNMI service</a>
+</li>
+            
+<li >
+    <a href="../gnmi_extensions/">gNMI extensions on the Northbound interface</a>
+</li>
+            
+<li >
+    <a href="../license_goland/">GoLand Copyright Profile Setup</a>
+</li>
+            
+<li >
+    <a href="../modelplugin/">Extending onos-config with Model Plugins</a>
+</li>
+            
+<li >
+    <a href="../prerequisites/">Development Prerequisites</a>
+</li>
+            
+<li >
+    <a href="../pull_requests/">Issues and Pull Requests</a>
+</li>
+            
+<li >
+    <a href="../run/">Running onos-config</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Modelplugin</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Yang</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../modelplugin/yang/">YANG store</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Onos test <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../onos-test/">Index</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Docs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../onos-test/docs/run/">Run</a>
+</li>
+            
+<li >
+    <a href="../../../onos-test/docs/setup/">How To Install and Run ONIT?</a>
+</li>
+            
+<li >
+    <a href="../../../onos-test/docs/testing/">Running Tests</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Onos ztp <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../onos-ztp/">onos-ztp</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Repo docs 1 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../repo-docs-1/">repo-docs-1</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Docs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../repo-docs-1/docs/">Index</a>
+</li>
+            
+<li >
+    <a href="../../../repo-docs-1/docs/test-1/">Document Test 1</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../debugging/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../dev_workflow/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#deploying-onos-config">Deploying onos-config</a></li>
+            <li><a href="#deploying-on-kubernetes-with-helm">Deploying on Kubernetes with Helm</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="deploying-onos-config">Deploying onos-config</h1>
+<p>One of the goals of the onos-config project is to provide simple deployment options
+that integrate with modern technologies. Deployment configurations can be found in
+the <code>/deployments</code> folder in this repository.</p>
+<h2 id="deploying-on-kubernetes-with-helm">Deploying on Kubernetes with Helm</h2>
+<p><a href="https://helm.sh/">Helm</a> is a package manager for <a href="https://kubernetes.io/">Kubernetes</a> that allows projects to provide a
+collection of templates for all the resources needed to deploy on k8s. ONOS Config
+provides a Helm chart for deploying a cluster for development and testing. In the
+future, this chart will be extended for production use.</p>
+<h3 id="resources">Resources</h3>
+<p>The Helm chart provides resources for deploying the config service and accessing
+it over the network, both inside and outside the k8s cluster:
+* <code>Deployment</code> - Provides a template for ONOS Config pods
+* <code>ConfigMap</code> - Provides test configurations for the application
+* <code>Service</code> - Exposes ONOS Config to other applications on the network
+* <code>Secret</code> - Provides TLS certificates for end-to-end encryption
+* <code>Ingress</code> - Optionally provides support for external load balancing</p>
+<h3 id="local-deployment-setup">Local Deployment Setup</h3>
+<p>To deploy the Helm chart locally, install <a href="https://kubernetes.io/docs/setup/minikube/">Minikube</a> and <a href="https://helm.sh/">Helm</a>. On OSX, this can be done
+using <a href="https://brew.sh/">Brew</a>:</p>
+<pre><code class="bash">&gt; brew cask install minikube
+&gt; brew install kubernetes-helm
+</code></pre>
+
+<p>You will also need VirtualBox 6.0 or higher and Docker to build and deploy an image.
+* VirtualBox <a href="https://www.virtualbox.org/wiki/Downloads">installation instructions</a>
+* Docker <a href="https://docs.docker.com/v17.12/install/">installation instructions</a></p>
+<p>On Linux, users have <a href="https://kubernetes.io/docs/setup/minikube/#additional-links">additional options</a>
+for installing local k8s clusters.</p>
+<p>Once Minikube has been installed, start it with <code>minikube start</code>. If deploying an
+<a href="https://kubernetes.io/docs/concepts/services-networking/ingress/">ingress</a> to access the service from outside the cluster, be sure to give enough
+memory to the VM to run <a href="https://www.nginx.com/">NGINX</a>.</p>
+<pre><code class="bash">&gt; minikube start --memory=4096 --disk-size=50g --cpus=4
+</code></pre>
+
+<p>Once Minikube has been started, set your Docker environment to the Minikube Docker
+daemon and build the ONOS Config image:</p>
+<pre><code class="bash">&gt; eval $(minikube docker-env)
+&gt; make
+</code></pre>
+
+<p>Helm requires a special pod called Tiller to be running inside the k8s cluster for deployment
+management. Before using Helm you must deploy the Tiller pod via <code>helm init</code>:</p>
+<pre><code class="bash">&gt; helm init
+</code></pre>
+
+<p>Wait for the Tiller pod to transition to the ready state before proceeding:</p>
+<pre><code class="bash">&gt; kubectl get pods -n kube-system
+NAME                                        READY   STATUS    RESTARTS   AGE
+...
+tiller-deploy-659d9559f5-k4v6p              1/1     Running   0          65s
+</code></pre>
+
+<p>The onos-config Helm charts also support exposing the config service externally via an [<code>Ingress</code>] 
+resource. But to support ingress, the Kubernetes cluster must first be configured with an
+<a href="https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/">ingress controller</a>.
+Fortunately, Minikube ships with the <a href="https://www.nginx.com/">NGINX</a> ingress controller provided as an addon, so to enable
+ingress via NGINX simply enable the <code>ingress</code> addon:</p>
+<pre><code class="bash">&gt; minikube addons enable ingress
+</code></pre>
+
+<p>Again, ensure the <code>nginx-ingress-controller-x</code> pod in the <code>kube-system</code> namespace is running and ready:</p>
+<pre><code class="bash">&gt; kubectl get pods -n kube-system
+NAME                                        READY   STATUS    RESTARTS   AGE
+...
+nginx-ingress-controller-586cdc477c-whbx5   1/1     Running   0          7m52s
+</code></pre>
+
+<h3 id="installing-the-chart">Installing the Chart</h3>
+<p>To install the chart, simply run <code>helm install deployments/helm/onos-config</code> from
+the root directory of this project:</p>
+<pre><code class="bash">&gt; helm install deployments/helm/onos-config
+NAME:   jumpy-tortoise
+LAST DEPLOYED: Tue May 14 18:56:39 2019
+NAMESPACE: default
+STATUS: DEPLOYED
+
+RESOURCES:
+==&gt; v1/Service
+NAME                                TYPE      CLUSTER-IP    EXTERNAL-IP  PORT(S)         AGE
+jumpy-tortoise-onos-config          NodePort  10.106.9.103  &lt;none&gt;       5150:32271/TCP  0s
+
+==&gt; v1/Deployment
+NAME                                DESIRED  CURRENT  UP-TO-DATE  AVAILABLE  AGE
+jumpy-tortoise-onos-config          1        1        1           0          0s
+
+==&gt; v1beta1/Ingress
+NAME                                        HOSTS                   ADDRESS  PORTS  AGE
+jumpy-tortoise-onos-config-ingress          config.onosproject.org  80, 443  0s
+
+==&gt; v1/Pod(related)
+NAME                                                 READY  STATUS             RESTARTS  AGE
+jumpy-tortoise-onos-config-655964cbf5-tkcfb          0/1    ContainerCreating  0         0s
+
+==&gt; v1/Secret
+NAME                                       TYPE    DATA  AGE
+jumpy-tortoise-onos-config-secret          Opaque  4     0s
+
+==&gt; v1/ConfigMap
+NAME                                       DATA  AGE
+jumpy-tortoise-onos-config-config          5     0s
+</code></pre>
+
+<p><code>helm install</code> assigns a unique name to the chart and displays all the k8s resources that were
+created by it. To list the charts that are installed and view their statuses, run <code>helm ls</code>:</p>
+<pre><code class="bash">&gt; helm ls
+NAME            REVISION    UPDATED                     STATUS      CHART                       APP VERSION NAMESPACE
+...
+jumpy-tortoise  1           Tue May 14 18:56:39 2019    DEPLOYED    onos-config-0.0.1           0.0.1       default
+</code></pre>
+
+<p>To view the pods that are deployed, run <code>kubectl get pods</code>:</p>
+<pre><code class="bash">&gt; kubectl get pods
+NAME                                                  READY   STATUS    RESTARTS   AGE
+...
+jumpy-tortoise-onos-config-655964cbf5-tkcfb           1/1     Running   0          52s
+</code></pre>
+
+<p>You can view more detailed information about the pod and other resources by running <code>kubectl describe</code>:</p>
+<pre><code class="bash">&gt; kubectl describe pod jumpy-tortoise-onos-config-655964cbf5-tkcfb
+Name:               jumpy-tortoise-onos-config-655964cbf5-tkcfb
+Namespace:          default
+Priority:           0
+PriorityClassName:  &lt;none&gt;
+Node:               minikube/10.0.2.15
+Start Time:         Tue, 14 May 2019 18:56:39 -0700
+...
+</code></pre>
+
+<p>The onos-config pods are reached through a <code>Service</code> which load balances requests to the application.
+To view the services, run <code>kubectl get services</code>:</p>
+<pre><code class="bash">&gt; kubectl get svc
+NAME                                        DATA   AGE
+...
+jumpy-tortoise-onos-config-config           5      86s
+</code></pre>
+
+<p>The application's configuration is stored in a <code>ConfigMap</code> which can be viewed by running
+<code>kubectl get configmaps</code>:</p>
+<pre><code class="bash">&gt; kubectl get cm
+NAME                                        DATA   AGE
+...
+jumpy-tortoise-onos-config-config           5      97s
+</code></pre>
+
+<p>And TLS keys and certs are stored in a <code>Secret</code> resource:</p>
+<pre><code class="bash">&gt; kubectl get secrets
+NAME                                        TYPE                                  DATA   AGE
+...
+jumpy-tortoise-onos-config-secret           Opaque                                4      109s
+</code></pre>
+
+<h4 id="ingress">Ingress</h4>
+<p>You can optionally enable <a href="https://kubernetes.io/docs/concepts/services-networking/ingress/">ingress</a> by overriding <code>ingress.enabled</code>. Note that you
+must have an ingress controller installed/enabled as described above:</p>
+<pre><code class="bash">&gt; helm install \
+    -n onos-config \
+    --set ingress.enabled=true \
+    deployments/helm/onos-config
+</code></pre>
+
+<p>By default, the ingress controller uses the self-signed certificates that ship with the 
+chart to provide end-to-end routing, load balancing, and encryption, making the onos-config
+services accessible from outside the k8s cluster. The default certificates expect the
+service to be reached through the <code>config.onosproject.org</code> domain. Thus, to connect
+to the service through the ingress, you must configure <code>/etc/hosts</code> to point to the
+load balancer's IP:</p>
+<pre><code>192.168.99.102 config.onosproject.org
+</code></pre>
+
+<p>The IP address of the ingress may differ depending on the environment. In clustered environments,
+the ingress IP is typically read from the <code>ingress</code> resource:</p>
+<pre><code class="bash">&gt; kubectl get ingress
+NAME                                      HOSTS                    ADDRESS     PORTS     AGE
+onos-config-onos-config-ingress           config.onosproject.org   10.0.2.15   80, 443   76m
+</code></pre>
+
+<p>However, since Minikube runs in a VM, the ingress must be reached through the Minikube VM's IP
+which can be found via the <code>minikube ip</code> command:</p>
+<pre><code class="bash">LBIP=$(minikube ip)
+</code></pre>
+
+<p>In clustered environments, the ingress IP can be retrieved from the ingress
+metadata:</p>
+<pre><code class="bash">&gt; kubectl get ingress
+NAME                                      HOSTS                    ADDRESS     PORTS     AGE
+onos-config-onos-config-ingress           config.onosproject.org   10.0.2.15   80, 443   76m
+</code></pre>
+
+<p>Once you've located the ingress IP address and configured <code>/etc/hosts</code>, you can connect to
+the onos-config service via the ingress load balancer:</p>
+<pre><code class="bash">&gt; onos config --address=config.onosproject.org:443 get changes
+</code></pre>
+
+<p>| Note that the <code>onos</code> command-line client must be built or installed as described in 
+the <a href="../cli/#Client">CLI documentation</a>.</p>
+<p>Clients must connect through the HTTPS port using the certificates with which the ingress
+was configured. Currently, the certificates used by the Helm chart can be found in the
+<code>deployments/helm/onos-config/files/certs</code> directory.</p>
+<h3 id="command-line-shell-container">Command-line shell container</h3>
+<p>For containerized environments like Kubernetes, a Docker image <code>onosproject/onos-cli</code> is provided.
+This image is built as part of the normal build.</p>
+<p>To use the CLI in Kubernetes, run the <code>onosproject/onos-cli</code> image in a single pod deployment:</p>
+<pre><code class="bash">&gt; kubectl run onos-cli --rm -it --image onosproject/onos-cli:latest --image-pull-policy &quot;IfNotPresent&quot; --restart &quot;Never&quot;
+</code></pre>
+
+<p>This command will run the CLI image as a Deployment and log into the bash shell.
+Once you've joined the container, you can connect to the <code>onos-config</code> server by running:</p>
+<pre><code class="bash">&gt; onos config config set address something-else-onos-config:5150
+something-else-onos-config:5150
+</code></pre>
+
+<p>Note that this is only necessary if you named your deployment something else than <code>onos-config</code>.
+Once the controller address is set, you should be able to execute any of the ONOS commands without 
+specifying the controller address each time. See the <a href="../cli/">onos-cli</a> for the full usage information.</p>
+<p>Once the shell is exited, the Deployment will be deleted.</p>
+<h3 id="deploying-the-device-simulator">Deploying the device simulator</h3>
+<p>ONOS Config provides a device simulator
+for end-to-end testing. As with the onos-config app, a <a href="https://helm.sh/">Helm</a> chart is provided for
+deployment in <a href="https://kubernetes.io/">Kubernetes</a>. Each chart instance deploys a single simulated device
+<code>Pod</code> and a <code>Service</code> through which the simulator can be accessed. The onos-config chart can
+then be configured to connect to the devices in k8s.</p>
+<p>Device simulators can be deployed using the <code>deployments/helm/device-simulator</code> chart:</p>
+<pre><code class="bash">&gt; helm install -n device-1 deployments/helm/device-simulator
+NAME:   device-1
+LAST DEPLOYED: Sun May 12 01:16:41 2019
+NAMESPACE: default
+STATUS: DEPLOYED
+
+RESOURCES:
+==&gt; v1/ConfigMap
+NAME                              DATA  AGE
+device-1-device-simulator-config  1     1s
+
+==&gt; v1/Service
+NAME                       TYPE       CLUSTER-IP     EXTERNAL-IP  PORT(S)    AGE
+device-1-device-simulator  ClusterIP  10.110.252.69  &lt;none&gt;       10161/TCP  1s
+
+==&gt; v1/Pod
+NAME                       READY  STATUS             RESTARTS  AGE
+device-1-device-simulator  0/1    ContainerCreating  0         1s
+</code></pre>
+
+<p>The device-simulator chart deploys a single <code>Pod</code> containing the device simulator with a <code>Service</code>
+through which it can be accessed. The device simulator's service can be seen by running the
+<code>kubectl get services</code> command:</p>
+<pre><code class="bash">&gt; kubectl get svc
+NAME                              TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+device-1-device-simulator         ClusterIP   10.106.28.52    &lt;none&gt;        10161/TCP        25m
+</code></pre>
+
+<p>onos-config pods can be connected to the device through this service by passing the service name
+and port to the onos-config Helm chart via the <code>devices</code> option:</p>
+<pre><code class="bash">&gt; helm install \
+    -n onos-config \
+    --set ingress.enabled=true \
+    --set devices='{device-1-device-simulator}' \
+    deployments/helm/onos-config
+</code></pre>
+
+<p>You can verify that the onos-config pods were connected to the device by checking the logs:</p>
+<pre><code class="bash">&gt; kubectl get pods
+device-1-device-simulator                          1/1     Running       0          86s
+onos-config-onos-config-6f476ddc95-rgpgs           1/1     Running       0          16s
+&gt; kubectl logs onos-config-onos-config-6f476ddc95-rgpgs
+2019/05/15 07:07:36 Creating Manager
+2019/05/15 07:07:36 Starting Manager
+2019/05/15 07:07:36 Connecting to device-1-device-simulator:10161 over gNMI
+2019/05/15 07:07:36 Could not get target Client for {device-1-device-simulator:10161} does not exist, create first
+2019/05/15 07:07:36 Loading default CA onfca
+2019/05/15 07:07:36 Event listener initialized
+2019/05/15 07:07:36 Loading default certificates
+2019/05/15 07:07:36 device-1-device-simulator:10161 Connected over gNMI
+2019/05/15 07:07:36 device-1-device-simulator:10161 Capabilities supported_models:&lt;name:&quot;openconfig-interfaces&quot; organization:&quot;OpenConfig working group&quot; version:&quot;2.0.0&quot; &gt; supported_models:&lt;name:&quot;openconfig-openflow&quot; organization:&quot;OpenConfig working group&quot; version:&quot;0.1.0&quot; &gt; supported_models:&lt;name:&quot;openconfig-platform&quot; organization:&quot;OpenConfig working group&quot; version:&quot;0.5.0&quot; &gt; supported_models:&lt;name:&quot;openconfig-system&quot; organization:&quot;OpenConfig working group&quot; version:&quot;0.2.0&quot; &gt; supported_encodings:JSON supported_encodings:JSON_IETF gNMI_version:&quot;0.7.0&quot;
+</code></pre>
+
+<p>Once onos-config has been deployed and connected to the device service, the northbound API can be
+used to query and update the device configuration. This is done by setting the <code>-address</code> argument
+in the <code>gnmi_cli</code> to the ingress <code>host:port</code> - i.e. <code>config.onosproject.org:443</code> - and identifying
+the device in the update <code>target</code>. Devices again are identified by the name of their associated 
+service and port:</p>
+<pre><code class="bash">&gt; gnmi_cli -set \
+    -address config.onosproject.org:443 \
+    -proto &quot;update: &lt;path: &lt;target: 'device-1-device-simulator', elem: &lt;name: 'system'&gt; elem: &lt;name: 'clock' &gt; elem: &lt;name: 'config'&gt; elem: &lt;name: 'timezone-name'&gt;&gt; val: &lt;string_val: 'Europe/Dublin'&gt;&gt;&quot; \
+    -timeout 5s \
+    -client_crt deployments/helm/onos-config/files/certs/tls.crt \
+    -client_key deployments/helm/onos-config/files/certs/tls.key \
+    -ca_crt deployments/helm/onos-config/files/certs/tls.cacrt \
+    -alsologtostderr
+response: &lt;
+  path: &lt;
+    elem: &lt;
+      name: &quot;/system/clock/config/timezone-name&quot;
+    &gt;
+    target: &quot;device-1-device-simulator&quot;
+  &gt;
+  op: UPDATE
+&gt;
+timestamp: 1557904258
+</code></pre>
+
+<p>The client must connect through the HTTPS port using the certificates with which the <em>ingress</em>
+was configured. The default certificates provided by the onos-config Helm chart can be found in the
+<code>deployments/helm/onos-config/files/certs</code> directory.</p>
+<p>Once you have modified the device, you can verify that onos-config handled the update successfully
+by checking the onos-config logs:</p>
+<pre><code class="bash">&gt; kubectl logs onos-config-onos-config-6f476ddc95-rgpgs
+...
+2019/05/15 07:07:36 device-1-device-simulator:10161 Connected over gNMI
+2019/05/15 07:07:36 device-1-device-simulator:10161 Capabilities supported_models:&lt;name:&quot;openconfig-interfaces&quot; organization:&quot;OpenConfig working group&quot; version:&quot;2.0.0&quot; &gt; supported_models:&lt;name:&quot;openconfig-openflow&quot; organization:&quot;OpenConfig working group&quot; version:&quot;0.1.0&quot; &gt; supported_models:&lt;name:&quot;openconfig-platform&quot; organization:&quot;OpenConfig working group&quot; version:&quot;0.5.0&quot; &gt; supported_models:&lt;name:&quot;openconfig-system&quot; organization:&quot;OpenConfig working group&quot; version:&quot;0.2.0&quot; &gt; supported_encodings:JSON supported_encodings:JSON_IETF gNMI_version:&quot;0.7.0&quot;
+2019/05/15 07:10:58 Added change M/IUW67JikD+V0clLfTEz5lTm6s= to ChangeStore (in memory)
+2019/05/15 07:10:58 Change formatted to gNMI setRequest update:&lt;path:&lt;elem:&lt;name:&quot;system&quot; &gt; elem:&lt;name:&quot;clock&quot; &gt; elem:&lt;name:&quot;config&quot; &gt; elem:&lt;name:&quot;timezone-name&quot; &gt; &gt; val:&lt;string_val:&quot;Europe/Dublin&quot; &gt; &gt;
+2019/05/15 07:10:58 device-1-device-simulator:10161 SetResponse response:&lt;path:&lt;elem:&lt;name:&quot;system&quot; &gt; elem:&lt;name:&quot;clock&quot; &gt; elem:&lt;name:&quot;config&quot; &gt; elem:&lt;name:&quot;timezone-name&quot; &gt; &gt; op:UPDATE &gt;
+</code></pre>
+
+<p>If the update was successful, you should be able to read the updated state of the device
+through the northbound API:</p>
+<pre><code class="bash">&gt; gnmi_cli -get \
+    -address config.onosproject.org:443 \
+    -proto &quot;path: &lt;target: 'device-1-device-simulator', elem: &lt;name: 'system'&gt; elem: &lt;name: 'clock' &gt; elem:&lt;name:'config'&gt; elem: &lt;name: 'timezone-name'&gt;&gt;&quot; \
+    -timeout 5s \
+    -client_crt deployments/helm/onos-config/files/certs/tls.crt \
+    -client_key deployments/helm/onos-config/files/certs/tls.key \
+    -ca_crt deployments/helm/onos-config/files/certs/tls.cacrt \
+    -alsologtostderr
+notification: &lt;
+  timestamp: 1557856109
+  update: &lt;
+    path: &lt;
+      elem: &lt;
+        name: &quot;system&quot;
+      &gt;
+      elem: &lt;
+        name: &quot;clock&quot;
+      &gt;
+      elem: &lt;
+        name: &quot;config&quot;
+      &gt;
+      elem: &lt;
+        name: &quot;timezone-name&quot;
+      &gt;
+      target: &quot;device-1-device-simulator&quot;
+    &gt;
+    val: &lt;
+      ascii_val: &quot;Europe/Dublin&quot;
+    &gt;
+  &gt;
+&gt;
+</code></pre>
+
+<h4 id="deploying-multiple-simulators">Deploying multiple simulators</h4>
+<p>To deploy onos-config with multiple simulators, simply install the simulator chart <em>n</em> times
+to create <em>n</em> devices, each with a unique name:</p>
+<pre><code class="bash">&gt; helm install -n device-1 deployments/helm/device-simulator
+&gt; helm install -n device-2 deployments/helm/device-simulator
+&gt; helm install -n device-3 deployments/helm/device-simulator
+</code></pre>
+
+<p>Then pass a comma-separated list of device services to configure the onos-config pods to connect
+to each of the devices:</p>
+<pre><code class="bash">&gt; kubectl get svc
+NAME                        TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)     AGE
+device-1-device-simulator   ClusterIP   10.106.28.52    &lt;none&gt;        10161/TCP   49s
+device-2-device-simulator   ClusterIP   10.98.157.220   &lt;none&gt;        10161/TCP   23s
+device-3-device-simulator   ClusterIP   10.110.71.250   &lt;none&gt;        10161/TCP   17s
+&gt; helm install \
+    -n onos-config \
+    --set ingress.enabled=true \
+    --set devices='{device-1-device-simulator,device-2-device-simulator,device-3-device-simulator}' \
+    deployments/helm/onos-config
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
