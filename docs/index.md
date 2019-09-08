@@ -1,3 +1,3 @@
-# Welcome to MkDocs
+# Multirepo docs
 
-Multi-repo docs
+Multi-repo docs example
