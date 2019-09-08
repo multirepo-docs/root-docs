@@ -1,1 +1,1 @@
-{"config":{"lang":["en"],"prebuild_index":false,"separator":"[\\s\\-]+"},"docs":[{"location":"","text":"Welcome to MkDocs Test Travis","title":"Welcome to MkDocs"},{"location":"#welcome-to-mkdocs","text":"Test Travis","title":"Welcome to MkDocs"}]}
+{"config":{"lang":["en"],"prebuild_index":false,"separator":"[\\s\\-]+"},"docs":[{"location":"","text":"Welcome to MkDocs Hello Test Travis","title":"Welcome to MkDocs"},{"location":"#welcome-to-mkdocs","text":"Hello Test Travis","title":"Welcome to MkDocs"}]}
