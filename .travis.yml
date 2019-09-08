@@ -19,5 +19,6 @@ after_success:
 - cd docs && git submodule add https://github.com/onosproject/onos-config.git && rm -rf !(docs)
 - cd $CURRENT_PATH
 - cd docs && git submodule add https://github.com/onosproject/onos-ztp.git
+- cd $CURRENT_PATH
 - mkdocs gh-deploy -v --clean --remote-name gh-token;
 
