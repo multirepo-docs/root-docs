@@ -13,6 +13,6 @@ after_success:
 - git fetch gh-token && git fetch gh-token gh-pages:gh-pages;
 - echo $PWD
 - cd docs && git submodule add https://github.com/multirepo-docs/repo-docs-1.git
-- cd $HOME/multirepo-docs/root-docs
+- cd $HOME/build/multirepo-docs/root-docs
 - mkdocs gh-deploy -v --clean --remote-name gh-token;
 
