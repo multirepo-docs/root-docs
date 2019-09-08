@@ -1,2 +1,3 @@
-# Contributing to Multi-Repo Docs
+
+# Contribution Guidelines
 
