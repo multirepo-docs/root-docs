@@ -16,7 +16,7 @@ after_success:
 - cd $CURRENT_PATH
 - cd docs && git submodule add https://github.com/onosproject/onos-test.git
 - cd $CURRENT_PATH
-- cd docs && git submodule add https://github.com/onosproject/onos-config.git && rm -rf !(docs)
+- cd docs && git submodule add https://github.com/onosproject/onos-config.git
 - cd $CURRENT_PATH
 - cd docs && git submodule add https://github.com/onosproject/onos-ztp.git
 - cd $CURRENT_PATH
