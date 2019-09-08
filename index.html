@@ -8,7 +8,7 @@
   <meta name="description" content="None">
   
   <link rel="shortcut icon" href="img/favicon.ico">
-  <title>An Example of Multi-repository documents - Multi repo docs</title>
+  <title>An Example of Multi-Repo Documents - Multi repo docs</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="css/theme.css" type="text/css" />
@@ -17,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "An Example of Multi-repository documents";
+    var mkdocs_page_name = "An Example of Multi-Repo Documents";
     var mkdocs_page_input_path = "index.md";
     var mkdocs_page_url = null;
   </script>
@@ -50,10 +50,10 @@
           
             <li class="toctree-l1 current">
 		
-    <a class="current" href=".">An Example of Multi-repository documents</a>
+    <a class="current" href=".">An Example of Multi-Repo Documents</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#an-example-of-multi-repository-documents">An Example of Multi-repository documents</a></li>
+    <li class="toctree-l2"><a href="#an-example-of-multi-repo-documents">An Example of Multi-Repo Documents</a></li>
     
 
     </ul>
@@ -148,7 +148,7 @@
     
       
     
-    <li>An Example of Multi-repository documents</li>
+    <li>An Example of Multi-Repo Documents</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -158,8 +158,10 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="an-example-of-multi-repository-documents">An Example of Multi-repository documents</h1>
-<p>In a microservice architecture, each subsystem is in its own repository. Furthermore, Each individual repository would also have documentation under <code>/docs</code> that  makes it easier to keep documentation updated as code changes within each repo. This example explains  how we can achieve the goal using  <code>git submodules</code> and <code>Trigger Travis CI builds</code></p>
+                <h1 id="an-example-of-multi-repo-documents">An Example of Multi-Repo Documents</h1>
+<p>In a microservice architecture, each subsystem is in its own repository. Furthermore, Each individual repository would also have documentation under <code>/docs</code> that  makes it easier to keep documentation updated as code changes within each repo. 
+Multi-Repo Docs is a new process that collects docs from multiple repos and publishes all them on a single website.</p>
+<p>This example explains  how we can achieve the goal using  <code>git submodules</code> and <code>Trigger Travis CI builds</code>. Suppose we have three repos named <code>repo-docs-1</code>, <code>repo-docs-2</code>, and <code>repo-docs-3</code>. In addition, suppose we have one root repo named <code>root-docs</code> that keeps the website related files. The idea is to trigger a job in <code>root-docs</code> repo to build and push the website files whenever there is a change (i.e. a merge commit) in any of doc repos (i.e. repo-docs-1, repo-docs-2, repo-docs-3). The job in <code>root-docs</code> adds a submodule of each doc repo to build and push the website using <a href="https://www.mkdocs.org/">MkDocs</a> static site generator.   </p>
               
             </div>
           </div>
@@ -208,5 +210,5 @@
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-09-08 21:50:06
+Build Date UTC : 2019-09-08 22:07:32
 -->
