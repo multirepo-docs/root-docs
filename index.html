@@ -161,7 +161,8 @@
                 <h1 id="an-example-of-multi-repo-documents">An Example of Multi-Repo Documents</h1>
 <p>In a microservice architecture, each subsystem is in its own repository. Furthermore, Each individual repository would also have documentation under <code>/docs</code> that  makes it easier to keep documentation updated as code changes within each repo. 
 Multi-Repo Docs is a new process that collects docs from multiple repos and publishes all them on a single website.</p>
-<p>This example explains  how we can achieve the goal using  <code>git submodules</code> and <code>Trigger Travis CI builds</code>. Suppose we have three repos named <code>repo-docs-1</code>, <code>repo-docs-2</code>, and <code>repo-docs-3</code>. In addition, suppose we have one root repo named <code>root-docs</code> that keeps the website related files. The idea is to trigger a job in <code>root-docs</code> repo to build and push the website files whenever there is a change (i.e. a merge commit) in any of doc repos (i.e. repo-docs-1, repo-docs-2, repo-docs-3). The job in <code>root-docs</code> is responsible to add a submodule of each doc repo and build the website using <a href="https://www.mkdocs.org/">MkDocs</a> static site generator.   </p>
+<p>This example explains  how we can achieve the goal using  <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git submodules</a> and <a href="https://docs.travis-ci.com/user/triggering-builds/">Trigger Travis CI builds</a>. </p>
+<p>Suppose we have three repos named <a href="https://github.com/multirepo-docs/repo-docs-1">repo-docs-1</a>, <a href="https://github.com/multirepo-docs/repo-docs-2">repo-docs-2</a>, and <a href="https://github.com/multirepo-docs/repo-docs-3">repo-docs-3</a>. In addition, suppose we have one root repo named <a href="https://github.com/multirepo-docs/root-docs">root-docs</a> that keeps the website related files. The idea is to trigger a job in <code>root-docs</code> repo to build and push the website files whenever there is a change (i.e. a merge commit) in any of doc repos (i.e. repo-docs-1, repo-docs-2, repo-docs-3). The job in <code>root-docs</code> is responsible to add a submodule of each doc repo and build the website using <a href="https://www.mkdocs.org/">MkDocs</a> static site generator.   </p>
               
             </div>
           </div>
@@ -210,5 +211,5 @@ Multi-Repo Docs is a new process that collects docs from multiple repos and publ
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-09-08 22:11:51
+Build Date UTC : 2019-09-08 22:21:24
 -->
