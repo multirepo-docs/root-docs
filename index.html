@@ -8,7 +8,7 @@
   <meta name="description" content="None">
   
   <link rel="shortcut icon" href="img/favicon.ico">
-  <title>An Example of Multi-Repo Documents - Multi repo docs</title>
+  <title>multi-repo documents - Multi repo docs</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="css/theme.css" type="text/css" />
@@ -17,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "An Example of Multi-Repo Documents";
+    var mkdocs_page_name = "multi-repo documents";
     var mkdocs_page_input_path = "index.md";
     var mkdocs_page_url = null;
   </script>
@@ -50,10 +50,16 @@
           
             <li class="toctree-l1 current">
 		
-    <a class="current" href=".">An Example of Multi-Repo Documents</a>
+    <a class="current" href=".">multi-repo documents</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#an-example-of-multi-repo-documents">An Example of Multi-Repo Documents</a></li>
+    <li class="toctree-l2"><a href="#multi-repo-documents">multi-repo documents</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#an-example-of-multi-repo-documents">An Example of Multi-Repo Documents</a></li>
+        
+        </ul>
     
 
     </ul>
@@ -61,7 +67,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="contributing/">Contributing to Multi-Repo Docs</a>
+    <a class="" href="contributing/">Contribution Guidelines</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -158,7 +164,7 @@
     
       
     
-    <li>An Example of Multi-Repo Documents</li>
+    <li>multi-repo documents</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -168,7 +174,8 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="an-example-of-multi-repo-documents">An Example of Multi-Repo Documents</h1>
+                <h1 id="multi-repo-documents">multi-repo documents</h1>
+<h2 id="an-example-of-multi-repo-documents">An Example of Multi-Repo Documents</h2>
 <p>In a microservice architecture, each subsystem is in its own repository. Furthermore, Each individual repository would also have documentation under <code>/docs</code> that  makes it easier to keep documentation updated as code changes within each repo. 
 Multi-Repo Docs is a new process that collects docs from multiple repos and publishes all them on a single website. This example explains  how we can achieve the goal using  <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git submodules</a> and <a href="https://docs.travis-ci.com/user/triggering-builds/">Trigger Travis CI builds</a>. </p>
 <p>Suppose we have three repos named <a href="https://github.com/multirepo-docs/repo-docs-1">repo-docs-1</a>, <a href="https://github.com/multirepo-docs/repo-docs-2">repo-docs-2</a>, and <a href="https://github.com/multirepo-docs/repo-docs-3">repo-docs-3</a>. In addition, suppose we have one root repo named <a href="https://github.com/multirepo-docs/root-docs">root-docs</a> that keeps the website related files. The idea is to trigger a job in <code>root-docs</code> repo to build and push the website files whenever there is a change (i.e. a merge commit) in any of doc repos (i.e. repo-docs-1, repo-docs-2, repo-docs-3). The job in <code>root-docs</code> is responsible to add a submodule of each doc repo and build the website using <a href="https://www.mkdocs.org/">MkDocs</a> static site generator.   </p>
@@ -179,7 +186,7 @@ Multi-Repo Docs is a new process that collects docs from multiple repos and publ
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="contributing/" class="btn btn-neutral float-right" title="Contributing to Multi-Repo Docs">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="contributing/" class="btn btn-neutral float-right" title="Contribution Guidelines">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
     </div>
@@ -220,5 +227,5 @@ Multi-Repo Docs is a new process that collects docs from multiple repos and publ
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-09-08 23:45:20
+Build Date UTC : 2019-09-08 23:57:35
 -->
