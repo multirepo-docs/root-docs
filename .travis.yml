@@ -11,5 +11,6 @@ after_success:
 - git config user.email "arastega@purdue.edu"
 - git remote add gh-token "https://${GH_TOKEN}@github.com/multirepo-docs/root-docs.git";
 - git fetch gh-token && git fetch gh-token gh-pages:gh-pages;
+- echo $HOME
 - mkdocs gh-deploy -v --clean --remote-name gh-token;
 
