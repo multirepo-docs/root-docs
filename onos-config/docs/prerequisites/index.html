@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Development Prerequisites - My Docs</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">My Docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Onos config <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../">onos-config</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Build</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Golang build</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../build/golang-build/">Developer Docker Container</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Protoc go</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../build/protoc-go/">Protoc Go Docker Container</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Configs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../configs/">Index</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Deployments</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Helm</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Device simulator</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../deployments/helm/device-simulator/">Index</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Files</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Configs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../deployments/helm/device-simulator/files/configs/">Index</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Onos config</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../deployments/helm/onos-config/">Index</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Files</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Certs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../deployments/helm/onos-config/files/certs/">Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Configs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../deployments/helm/onos-config/files/configs/">Index</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Docs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../build/">Building onos-config</a>
+</li>
+            
+<li >
+    <a href="../cli/">Administrative and Diagnostic Command-Line</a>
+</li>
+            
+<li >
+    <a href="../community-info/">Contacts and Calendars</a>
+</li>
+            
+<li >
+    <a href="../contributing/">Contributing to onos-config</a>
+</li>
+            
+<li >
+    <a href="../debugging/">Debug onos-config in Onit Using Delve</a>
+</li>
+            
+<li >
+    <a href="../deployment/">Deploying onos-config</a>
+</li>
+            
+<li >
+    <a href="../dev_workflow/">Developer Workflow</a>
+</li>
+            
+<li >
+    <a href="../gnmi/">Northbound gNMI service</a>
+</li>
+            
+<li >
+    <a href="../gnmi_extensions/">gNMI extensions on the Northbound interface</a>
+</li>
+            
+<li >
+    <a href="../license_goland/">GoLand Copyright Profile Setup</a>
+</li>
+            
+<li >
+    <a href="../modelplugin/">Extending onos-config with Model Plugins</a>
+</li>
+            
+<li class="active">
+    <a href="./">Development Prerequisites</a>
+</li>
+            
+<li >
+    <a href="../pull_requests/">Issues and Pull Requests</a>
+</li>
+            
+<li >
+    <a href="../run/">Running onos-config</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Modelplugin</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Yang</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../modelplugin/yang/">YANG store</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Onos test <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../onos-test/">Index</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Docs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../onos-test/docs/run/">Run</a>
+</li>
+            
+<li >
+    <a href="../../../onos-test/docs/setup/">How To Install and Run ONIT?</a>
+</li>
+            
+<li >
+    <a href="../../../onos-test/docs/testing/">Running Tests</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Repo docs 1 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../repo-docs-1/">repo-docs-1</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Docs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../repo-docs-1/docs/">Index</a>
+</li>
+            
+<li >
+    <a href="../../../repo-docs-1/docs/test-1/">Document Test 1</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../modelplugin/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../pull_requests/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#development-prerequisites">Development Prerequisites</a></li>
+            <li><a href="#go-tools">Go Tools</a></li>
+            <li><a href="#go-linters">Go Linters</a></li>
+            <li><a href="#docker">Docker</a></li>
+            <li><a href="#local-kubernetes-environment">Local kubernetes environment</a></li>
+            <li><a href="#ide">IDE</a></li>
+            <li><a href="#license">License</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="development-prerequisites">Development Prerequisites</h1>
+<p>This document provides an overview of the tools and packages needed to work on and to build onos-config.
+Developers are expected to have these tools installed on the machine where the project is built.</p>
+<h2 id="go-tools">Go Tools</h2>
+<p>Since the project is authored mainly in the Go programming language, the project requires <a href="https://golang.org/doc/install">Go tools</a> 
+in order to build and execute the code.</p>
+<h2 id="go-linters">Go Linters</h2>
+<p><a href="https://github.com/golangci/golangci-lint">golangci-lint</a> is required to validate that the Go source code complies with the established style 
+guidelines. To install the tool, use this command:</p>
+<pre><code class="bash">&gt; curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s -- -b $(go env GOPATH)/bin latest
+</code></pre>
+
+<h2 id="docker">Docker</h2>
+<p><a href="https://docs.docker.com/install/">Docker</a> is required to build the project Docker images and also to compile <code>*.proto</code> files into Go source files.</p>
+<h2 id="local-kubernetes-environment">Local kubernetes environment</h2>
+<p>Some form of local kubernetes development environment is also needed.
+The core team uses <a href="https://github.com/kubernetes-sigs/kind">Kind</a>, but there are other options such as <a href="https://kubernetes.io/docs/tasks/tools/install-minikube/">Minikube</a>.</p>
+<h2 id="ide">IDE</h2>
+<p>Some form of an integrated development environment is also recommended.
+The core team uses the <a href="/https://www.jetbrains.com/go/">GoLand IDE</a> from JetBrains, but there are many other options. 
+Microsoft's <a href="/https://code.visualstudio.com">Visual Studio Code</a> is one such option and is available as a free download.</p>
+<p>Note that when using <a href="/https://www.jetbrains.com/go/">GoLand IDE</a> you should enable integration with Go modules in <code>Preferences -&gt; Go -&gt; Go Modules</code>.</p>
+<h2 id="license">License</h2>
+<p>The project requires that all Go source files are properly annotated using the Apache 2.0 License.
+Since this requirement is enforced by the CI process, it is strongly recommended that developers
+setup their IDE to include the <a href="../../build/licensing/boilerplate.go.txt">license text</a>
+automatically.</p>
+<p><a href="../license_goland/">GoLand IDE can be easily setup to do this</a> and other IDEs will have a similar mechanism.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

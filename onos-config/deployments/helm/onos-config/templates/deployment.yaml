@@ -1,0 +1,111 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "fullname" . }}
+  chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+  release: "{{ .Release.Name }}"
+  heritage: "{{ .Release.Service }}"
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      name: {{ template "fullname" . }}
+  template:
+    metadata:
+      labels:
+        name: {{ template "fullname" . }}
+      {{ if .Values.annotations }}
+      annotations:
+        {{- range $key, $value := .Values.annotations }}
+        {{ $key }}: {{ $value }}
+        {{- end }}
+      {{ end }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+            - name: ATOMIX_CONTROLLER
+              value: {{ .Values.store.controller | quote }}
+            - name: ATOMIX_APP
+              value: {{ template "fullname" . }}
+            - name: ATOMIX_RAFT_GROUP
+              value: {{ template "fullname" . }}-raft
+          args:
+            - "-caPath=/etc/onos-config/certs/tls.cacrt"
+            - "-keyPath=/etc/onos-config/certs/tls.key"
+            - "-certPath=/etc/onos-config/certs/tls.crt"
+            - "-configStore=/etc/onos-config/test-configs/configStore-sample.json"
+            - "-changeStore=/etc/onos-config/test-configs/changeStore-sample.json"
+            - "-deviceStore=/etc/onos-config/test-configs/deviceStore.json"
+            - "-networkStore=/etc/onos-config/test-configs/networkStore-sample.json"
+            {{- range $i, $plugin := .Values.plugins }}
+            - {{ printf "-modelPlugin=/usr/local/lib/%s" $plugin }}
+            {{- end }}
+          ports:
+            - name: grpc
+              containerPort: 5150
+            # Expose the debug port for debugging
+            {{- if .Values.debug }}
+            - name: debug
+              containerPort: 40000
+              protocol: TCP
+            {{- end }}
+          # Disable probes for debugging since application starts paused
+          # See https://github.com/go-delve/delve/issues/245
+          {{- if not .Values.debug }}
+          readinessProbe:
+            tcpSocket:
+              port: 5150
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            tcpSocket:
+              port: 5150
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          {{- end }}
+          # Mount the test configuration
+          # TODO: This should be removed when stores are added!
+          volumeMounts:
+            - name: test-config
+              mountPath: /etc/onos-config/test-configs
+              readOnly: true
+            - name: secret
+              mountPath: /etc/onos-config/certs
+              readOnly: true
+      # Enable ptrace for debugging
+      {{- if .Values.debug }}
+      securityContext:
+        capabilities:
+          add:
+            - SYS_PTRACE
+      {{- end }}
+      {{- if .Values.image.pullSecrets }}
+      imagePullSecrets:
+        {{- range .Values.image.pullSecrets }}
+        - name: {{ . | quote }}
+        {{- end }}
+      {{- end }}
+      # Mount test volumes
+      # TODO: This should be removed when stores are added!
+      volumes:
+        - name: test-config
+          configMap:
+            name: {{ template "fullname" . }}-config
+        - name: secret
+          secret:
+            secretName: {{ template "fullname" . }}-secret

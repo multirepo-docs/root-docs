@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>onos-config - My Docs</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">My Docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Onos config <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li class="active">
+    <a href="./">onos-config</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Build</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Golang build</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="build/golang-build/">Developer Docker Container</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Protoc go</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="build/protoc-go/">Protoc Go Docker Container</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Configs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="configs/">Index</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Deployments</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Helm</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Device simulator</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="deployments/helm/device-simulator/">Index</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Files</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Configs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="deployments/helm/device-simulator/files/configs/">Index</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Onos config</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="deployments/helm/onos-config/">Index</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Files</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Certs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="deployments/helm/onos-config/files/certs/">Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Configs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="deployments/helm/onos-config/files/configs/">Index</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Docs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="docs/build/">Building onos-config</a>
+</li>
+            
+<li >
+    <a href="docs/cli/">Administrative and Diagnostic Command-Line</a>
+</li>
+            
+<li >
+    <a href="docs/community-info/">Contacts and Calendars</a>
+</li>
+            
+<li >
+    <a href="docs/contributing/">Contributing to onos-config</a>
+</li>
+            
+<li >
+    <a href="docs/debugging/">Debug onos-config in Onit Using Delve</a>
+</li>
+            
+<li >
+    <a href="docs/deployment/">Deploying onos-config</a>
+</li>
+            
+<li >
+    <a href="docs/dev_workflow/">Developer Workflow</a>
+</li>
+            
+<li >
+    <a href="docs/gnmi/">Northbound gNMI service</a>
+</li>
+            
+<li >
+    <a href="docs/gnmi_extensions/">gNMI extensions on the Northbound interface</a>
+</li>
+            
+<li >
+    <a href="docs/license_goland/">GoLand Copyright Profile Setup</a>
+</li>
+            
+<li >
+    <a href="docs/modelplugin/">Extending onos-config with Model Plugins</a>
+</li>
+            
+<li >
+    <a href="docs/prerequisites/">Development Prerequisites</a>
+</li>
+            
+<li >
+    <a href="docs/pull_requests/">Issues and Pull Requests</a>
+</li>
+            
+<li >
+    <a href="docs/run/">Running onos-config</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Modelplugin</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">Yang</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="modelplugin/yang/">YANG store</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Onos test <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../onos-test/">Index</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Docs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../onos-test/docs/run/">Run</a>
+</li>
+            
+<li >
+    <a href="../onos-test/docs/setup/">How To Install and Run ONIT?</a>
+</li>
+            
+<li >
+    <a href="../onos-test/docs/testing/">Running Tests</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Repo docs 1 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../repo-docs-1/">repo-docs-1</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Docs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../repo-docs-1/docs/">Index</a>
+</li>
+            
+<li >
+    <a href="../repo-docs-1/docs/test-1/">Document Test 1</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="..">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="build/golang-build/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#onos-config">onos-config</a></li>
+            <li><a href="#design-objectives">Design Objectives</a></li>
+            <li><a href="#key-tenets">Key Tenets</a></li>
+            <li><a href="#high-level-design">High-Level Design</a></li>
+            <li><a href="#additional-documentation">Additional Documentation</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="onos-config">onos-config</h1>
+<p><a href="https://travis-ci.org/onosproject/onos-config"><img alt="Build Status" src="https://travis-ci.org/onosproject/onos-config.svg?branch=master" /></a>
+<a href="https://travis-ci.org/onosproject/onos-test"><img alt="Integration Test Status" src="https://img.shields.io/travis/onosproject/onos-config?label=Integration%20Tests&amp;logo=Integration" /></a>
+<a href="https://goreportcard.com/report/github.com/onosproject/onos-config"><img alt="Go Report Card" src="https://goreportcard.com/badge/github.com/onosproject/onos-config" /></a>
+<a href="https://github.com/gojp/goreportcard/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" /></a>
+<a href="https://coveralls.io/github/onosproject/onos-config?branch=master"><img alt="Coverage Status" src="https://img.shields.io/coveralls/github/onosproject/onos-config/badge.svg" /></a>
+<a href="https://godoc.org/github.com/onosproject/onos-config"><img alt="GoDoc" src="https://godoc.org/github.com/onosproject/onos-config?status.svg" /></a></p>
+<p>ONOS Configuration subsystem built using the µONOS architecture</p>
+<h2 id="design-objectives">Design Objectives</h2>
+<p>gNMI provides transactionality with respect to a single device; all configuration operations specified as part of a 
+single batch are all applied or none of them are. The core capability of the configuration platform should build on 
+this gNMI feature to:</p>
+<ul>
+<li>Provide ability to apply a batch of operations (via NB gNMI API) targeted at multiple devices 
+  to be performed as a transaction; either all changes are applied to all devices or none of 
+  the changes are applied to any of the devices.</li>
+<li>Track configuration change transactions applied to a set of devices over time and allow 
+  rollback (via NB admin API) to previous configuration checkpoints demarcated by the transactions.</li>
+</ul>
+<p>The above features are the principal objectives for the configuration management platform. 
+Second order objectives are as follows:</p>
+<ul>
+<li>Support high-availability and distributed operation, including rolling upgrades</li>
+<li>Support networks comprising of ~50 devices, ~5000 ports and rate of ~10K incremental 
+  configuration transactions per day</li>
+</ul>
+<h3 id="additional-features-to-be-integrated-with-the-above">Additional Features (to be integrated with the above)</h3>
+<p>The following set of features will be required to support the real-world use-cases, 
+but may not necessarily be part of the code configuration subsystem and instead can be 
+provided as additional layers:</p>
+<ul>
+<li>Ability to preload initial configuration about devices that have not yet been discovered - 
+  or even deployed</li>
+<li>Dry run capability - validate configuration with respect to model, but also with respect 
+  to existing business constraints or policies</li>
+<li>Import existing device configuration</li>
+<li>Configuration Intents - ability to translate high-level (possibly network-wide) 
+  configuration specifications into lower-level (device-specific) operations</li>
+</ul>
+<h2 id="key-tenets">Key Tenets</h2>
+<ul>
+<li>Principal northbound API for the subsystem will be gNMI and gNOI.</li>
+<li>These interfaces are already accepted standards and are well-defined, low-profile interfaces 
+     with support for transaction semantics.</li>
+<li>YANG models that will be exposed as part of the NB API are yet to be determined (or defined).</li>
+<li>Enhanced northbound API will be a gRPC service providing access to administrative functionality.</li>
+<li>Applications can navigate the change-log and roll-back various changes as they were 
+     previously submitted via gNMI</li>
+<li>Southbound API for the subsystem will be gNMI and gNOI.</li>
+<li>This will allow direct use with Stratum-compliant switches without requiring an adaptation layer.</li>
+<li>Adapters can be created for devices that do not directly support gNMI/gNOI interfaces. 
+     Such adapters can be deployed either as proxy agents or potentially can be hosted on the devices themselves.</li>
+<li>Diagnostic gRPC service will allow for inspection of internal state using various remote tools.</li>
+<li>This interface is not subject to backward compatibility constraints.  </li>
+<li>The subsystem will be designed as a separate entity to allow its use with the existing 
+  ONOS 2.0 architecture and to fit with the NG ONOS architecture.</li>
+</ul>
+<h2 id="high-level-design">High-Level Design</h2>
+<p><img alt="design" src="docs/images/design.png" /></p>
+<h2 id="additional-documentation">Additional Documentation</h2>
+<ul>
+<li><a href="docs/contributing/">How to contribute</a> to onos-config project</li>
+<li><a href="docs/build/">How to build</a> onos-config server, related commands and Docker image</li>
+<li><a href="docs/run/">How to run</a> onos-config server and related commands</li>
+<li><a href="docs/deployment/">How to deploy</a> onos-config in a Kubernetes cluster</li>
+<li><a href="https://github.com/onosproject/onos-test/blob/master/docs/testing.md">How to test</a> onos-config integration tests with onit</li>
+<li><a href="docs/modelplugin/">How to onboard your device</a> extending onos-config with Model Plugins</li>
+<li><a href="docs/dev_workflow/">Developer workflow summary</a> for onos-config project</li>
+<li><a href="docs/community-info/">Contacts and Meetings</a> for onos-config project</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
