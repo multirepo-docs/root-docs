@@ -14,11 +14,9 @@ after_success:
 - CURRENT_PATH=$PWD
 - cd docs && git submodule add https://github.com/multirepo-docs/repo-docs-1.git
 - cd $CURRENT_PATH
-- cd docs && git submodule add https://github.com/onosproject/onos-test.git
+- cd docs && git submodule add https://github.com/multirepo-docs/repo-docs-2.git
 - cd $CURRENT_PATH
-- cd docs && git submodule add https://github.com/onosproject/onos-config.git
-- cd $CURRENT_PATH
-- cd docs && git submodule add https://github.com/onosproject/onos-ztp.git
+- cd docs && git submodule add https://github.com/multirepo-docs/repo-docs-3.git
 - cd $CURRENT_PATH
 - mkdocs gh-deploy -v --clean --remote-name gh-token;
 
