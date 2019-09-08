@@ -14,5 +14,7 @@ after_success:
 - echo $PWD
 - cd docs && git submodule add https://github.com/multirepo-docs/repo-docs-1.git
 - cd $HOME/build/multirepo-docs/root-docs
+- cd docs && git submodule add https://github.com/onosproject/onos-test.git
+- cd $HOME/build/multirepo-docs/root-docs
 - mkdocs gh-deploy -v --clean --remote-name gh-token;
 
