@@ -7,10 +7,12 @@ Suppose there are three repos named [repo-docs-1](https://github.com/multirepo-d
 
 ## Pros
 
-- "Distributed Docs and Centeralized Representation": The above solution provides a central repo for common documents and website related files and allows to keep each subsystem related docs in its own repo simultaneously.
+- "Distributed docs and a centeralized representation": The above solution provides a central repo for common documents and website related files and allows to keep each subsystem related docs in its own repo simultaneously.
 
 - "Easy to maintain": whenever there is a new repo added to the project, we just need to update the script that travis job runs to include its docs in the build process of the website. 
   
 ## Cons
+
+- 
 
 </div> 
