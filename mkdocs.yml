@@ -1,2 +1,2 @@
-site_name: Multi repo docs
-theme: readthedocs
+site_name: Multi-Repo Docs
+theme: 'material'
