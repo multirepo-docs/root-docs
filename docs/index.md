@@ -13,6 +13,6 @@ Suppose there are three repos named [repo-docs-1](https://github.com/multirepo-d
   
 ## Cons
 
-- **Documents Duplication**: the above approach still needs to bring a copy of the docs from other repos into the root repo (i.e. using git submodule) to build the website using most up to date docs. 
+- **Content Duplication**: the above solution still needs to bring a copy of the docs from other repos into the root repo (i.e. using git submodule) to build the website using most up to date docs. 
 
 </div> 
