@@ -1,4 +1,4 @@
-# Home
+#  Home
 <div style="text-align: justify"> 
 In a microservice architecture, each subsystem can be in its own repository. Furthermore, each individual repository would also have documentation under `/docs` that  makes it easier to keep documentation updated as code changes within each repo. 
 *Multi-Repo Docs* is a new process that collects docs from multiple repos and publishes all them on a single website. This example explains  how we can achieve the goal using  [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) and [Trigger Travis CI builds](https://docs.travis-ci.com/user/triggering-builds/). 
