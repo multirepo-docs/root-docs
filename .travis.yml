@@ -20,7 +20,7 @@ install:
 script:
 - git clean -f -d -x
 - curl -sfL https://raw.githubusercontent.com/containous/structor/master/godownloader.sh | bash -s -- -b $GOPATH/bin v1.7.0
-- sudo ./structor -o containous -r traefik --dockerfile-url="https://raw.githubusercontent.com/containous/traefik/master/docs.Dockerfile" --menu.js-url="https://raw.githubusercontent.com/containous/structor/master/traefik-menu.js.gotmpl" --exp-branch=master --debug
+- structor -o containous -r traefik --dockerfile-url="https://raw.githubusercontent.com/containous/traefik/master/docs.Dockerfile" --menu.js-url="https://raw.githubusercontent.com/containous/structor/master/traefik-menu.js.gotmpl" --exp-branch=master --debug
 
 after_success:
 - chmod +x build_docs.sh && ./build_docs.sh
