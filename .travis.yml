@@ -17,7 +17,6 @@ install:
 - sudo pip install mkdocs
 - sudo pip install mkdocs-material
 - sudo pip install mkdocs-rtd-dropdown
-- sudo pip install mkdocs-ivory
 script:
 - git clean -f -d -x
 
