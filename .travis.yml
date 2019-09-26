@@ -1,7 +1,20 @@
-sudo: required
-dist: trusty
-install:
-- sudo apt install python 
+language: go
+
+go:
+  - 1.12.x
+  - 1.x
+
+sudo: false
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+env:
+  - GO111MODULE=on
+install: 
+- sudo apt install python
 - pip install pygments
 - pip install mkdocs
 - pip install mkdocs-material
