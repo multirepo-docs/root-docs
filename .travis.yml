@@ -14,7 +14,7 @@ notifications:
 env:
   - GO111MODULE=on
 install: 
-- sudo apt install python
+- sudo apt install pip
 - pip install pygments
 - pip install mkdocs
 - pip install mkdocs-material
