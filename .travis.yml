@@ -1,6 +1,7 @@
 sudo: required
 dist: trusty
 install:
+- sudo apt install python 
 - pip install pygments
 - pip install mkdocs
 - pip install mkdocs-material
